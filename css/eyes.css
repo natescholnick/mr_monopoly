@@ -1,0 +1,51 @@
+@keyframes rightWink {
+  0%{
+    height: 100px;
+  }
+  50% {
+    height: 0px;
+    top: 200px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+
+
+.eyes {
+  top: 0px;
+  left: 210px;
+  height: 100px;
+  width: 65px;
+  position: absolute;
+  color: black;
+  /* background-color: currentColor; */
+  border-radius: 100%;
+  box-shadow:
+    210px 150px 0 0 currentColor;
+}
+
+.eyes::before {
+  content: "";
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 150px;
+  left: 440px;
+  background-color: currentColor;
+  border-radius: 100%;
+  animation-name: rightWink;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.eyes::after {
+  content: "";
+  position: absolute;
+  top: 113px;
+  left: 388px;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  border: 5px solid gold;
+}
